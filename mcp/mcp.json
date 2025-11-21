@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "FlightCustomerService": {
+      "command": "python3",
+      "args": [
+        "../mcp/server_new.py"
+      ],
+      "env": {
+        "FLIGHT_SERVICE_URL": "http://api:8002",
+        "AUTH_SERVICE_URL": "http://api:8001",
+        "CUSTOMER_SERVICE_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoc3ZjIiwic3ViIjoiNjhhNGUxYTA0ZDRkYTRhODczZDM4MDE1IiwiYXVkIjoiYXBpIiwiaWF0IjoxNzU4ODAwODI5LCJleHAiOjE3NTg4MDE3MjksInR5cGUiOiJhY2Nlc3MifQ.S1Lkd5U6_KuxWi2b3iG1txm11D8EHlQop1SAl7rWqOo"
+      }
+    }
+  }
+}

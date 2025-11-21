@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat FlightCo</title>
+  <link rel="stylesheet" href="/front/style.css">
+</head>
+<body>
+  <main class="chat-root">
+    <header class="chat-header">
+      <h1>Assistent FlightCo</h1>
+      <p class="subtitle">Converse com o assistente — as ações que modificam estado pedem confirmação.</p>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="form" class="composer" autocomplete="off">
+      <input id="inputMessage" type="text" placeholder="Write your message..." />
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="/front/app.js"></script>
+</body>
+</html>

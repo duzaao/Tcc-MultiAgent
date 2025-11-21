@@ -1,0 +1,76 @@
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build:
+      context: ../api
+      dockerfile: Dockerfile
+    env_file:
+      - ../.env
+    depends_on:
+      - mongo
+    ports:
+      - "8001:8001"
+      - "8002:8002"
+    restart: unless-stopped
+
+
+#  agent:
+#    build:
+#      context: ../agent
+#      dockerfile: Dockerfile
+#    env_file:
+#      - ../.env
+#    volumes:
+#      - ../mcp:/mcp:ro
+#    ports:
+#      - "8000:8000"
+#    restart: unless-stopped
+#
+#volumes:
+#  mongo_data:
+
+
+ollama:
+  image: ollama/ollama:latest
+  restart: unless-stopped
+  ports:
+    - "11434:11434"
+  volumes:
+    - ollama_data:/root/.ollama
+  devices:
+    - /dev/kfd:/dev/kfd
+    - /dev/dri:/dev/dri
+  group_add:
+    - video
+  privileged: true
+  entrypoint: /bin/bash -c "ollama serve & sleep 5 && ollama pull llama3.2:3b && wait"
+
+  agent:
+    build:
+      context: ../agent
+      dockerfile: Dockerfile
+    env_file:
+      - ../.env
+    volumes:
+      - ../mcp:/mcp:ro
+      - ../front:/front:ro
+      - ../questions.jsonl:/questions.jsonl:ro
+      - ../multi_eval:/out
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: "no"
+
+volumes:
+  mongo_data:
+  ollama_data:

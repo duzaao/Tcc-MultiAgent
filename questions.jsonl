@@ -1,0 +1,73 @@
+{"id": 1, "prompt": "Hi, what can you do exactly?", "category": "ambiguous"}
+{"id": 2, "prompt": "List all flights available from Sao Paulo", "category": "query"}
+{"id": 3, "prompt": "login with username 'aloha' and password 'eduardo1234'", "category": "login_auth"}
+{"id": 4, "prompt": "How do refunds work in FlightCo?", "category": "query"}
+{"id": 5, "prompt": "login aloha eduardo1234", "category": "login_auth"}
+{"id": 6, "prompt": "Show me all tickets for my account", "category": "query"}
+{"id": 7, "prompt": "I want to buy the flight ZZ999", "category": "action"}
+{"id": 8, "prompt": "Cancel my ticket for flight ZZ999", "category": "action"}
+{"id": 70, "prompt": "yes", "category": "action"}
+{"id": 9, "prompt": "What is the baggage allowance for international flights?", "category": "query"}
+{"id": 11, "prompt": "list my purchased tickets", "category": "query"}
+{"id": 12, "prompt": "logout", "category": "login_auth"}
+{"id": 13, "prompt": "yes", "category": "login_auth"}
+{"id": 17, "prompt": "list all flights", "category": "query"}
+{"id": 18, "prompt": "logout", "category": "login_auth"}
+{"id": 69, "prompt": "yes", "category": "login_auth"}
+
+{"id": 19, "prompt": "I want to access my account", "category": "login_auth"}
+{"id": 20, "prompt": "Login aloha eduardo1234", "category": "login_auth"}
+{"id": 21, "prompt": "Sign me in now", "category": "login_auth"}
+{"id": 22, "prompt": "Authenticate my session", "category": "login_auth"}
+{"id": 23, "prompt": "Login aloha eduardo1234", "category": "login_auth"}
+{"id": 24, "prompt": "Let me log in to my profile", "category": "login_auth"}
+{"id": 25, "prompt": "how can i login?", "category": "login_auth"}
+{"id": 26, "prompt": "Open my account dashboard", "category": "login_auth"}
+{"id": 27, "prompt": "list all flights from rio", "category": "login_auth"}
+{"id": 28, "prompt": "Access my saved tickets ", "category": "login_auth"}
+
+{"id": 29, "prompt": "Book a flight ZZ999", "category": "action"}
+{"id": 80, "prompt": "yes", "category": "action"}
+{"id": 30, "prompt": "Cancel my reservation for the ZZ999 flight", "category": "action"}
+{"id": 31, "prompt": "Yes", "category": "action"}
+{"id": 32, "prompt": "Reserve a new seat on flight AB123", "category": "action"}
+{"id": 33, "prompt": "Yes", "category": "action"}
+{"id": 34, "prompt": "search a flight from Sao Paulo", "category": "action"}
+{"id": 35, "prompt": "Change my flight date from 20 Dec to 22 Dec", "category": "action"}
+{"id": 36, "prompt": "Add extra baggage to my existing booking", "category": "action"}
+{"id": 37, "prompt": "Hold a reservation for Paris", "category": "action"}
+{"id": 38, "prompt": "Confirm purchase of ticket AB123", "category": "action"}
+{"id": 81, "prompt": "yes", "category": "query"}
+
+{"id": 39, "prompt": "Show me the flights to Berlin tomorrow", "category": "query"}
+{"id": 40, "prompt": "Do I have any tickets?", "category": "query"}
+{"id": 41, "prompt": "List available flights from Porto Alegre today", "category": "query"}
+{"id": 42, "prompt": "What flights arrive in Rio this evening?", "category": "query"}
+{"id": 43, "prompt": "Give me all international flights this weekend", "category": "query"}
+{"id": 44, "prompt": "Which flights still have seats to Madrid?", "category": "query"}
+{"id": 45, "prompt": "Show my active reservations", "category": "query"}
+{"id": 46, "prompt": "Do I hold any refundable tickets?", "category": "query"}
+{"id": 47, "prompt": "List flights departing before 9 AM tomorrow", "category": "query"}
+{"id": 48, "prompt": "Display my booking history", "category": "query"}
+
+{"id": 49, "prompt": "I think I need to travel again", "category": "ambiguous"}
+{"id": 50, "prompt": "I want to check something", "category": "ambiguous"}
+{"id": 51, "prompt": "Maybe I should see options", "category": "ambiguous"}
+{"id": 52, "prompt": "Not sure what flights are good", "category": "ambiguous"}
+{"id": 53, "prompt": "Could you help with whatever I need next?", "category": "ambiguous"}
+{"id": 54, "prompt": "I might want to change something", "category": "ambiguous"}
+{"id": 55, "prompt": "Thinking about a trip but unsure", "category": "ambiguous"}
+{"id": 56, "prompt": "I guess I need details", "category": "ambiguous"}
+{"id": 57, "prompt": "Can you guide me?", "category": "ambiguous"}
+{"id": 58, "prompt": "I’m exploring options now", "category": "ambiguous"}
+
+{"id": 59, "prompt": "I would like to, in a single seamless interaction, verify my current authenticated state, then if not authenticated initiate a secure login flow and subsequently enumerate all flights to three different destinations (Tokyo, Berlin, Madrid) for the next two weekends while also confirming baggage rules for international routes—please proceed carefully.", "category": "stress"}
+{"id": 60, "prompt": "Show flights... actually wait, first cancel ticket ZZ999 then maybe list remaining bookings and available flights to Lima next Friday.", "category": "stress"}
+{"id": 61, "prompt": "Book a flight—well I don't remember the code—something to Paris maybe, and also tell me if I already have any tickets that conflict.", "category": "stress"}
+{"id": 62, "prompt": "I lost track: do I have an active session, any tickets, and can you add baggage if possible?", "category": "stress"}
+{"id": 63, "prompt": "Cancel the reservation AB123 and after that (only if cancellation succeeds) show alternatives to New York tomorrow afternoon.", "category": "stress"}
+{"id": 64, "prompt": "yes", "category": "stress"}
+{"id": 65, "prompt": "Just checking: tickets? flights? status? everything concise.", "category": "stress"}
+{"id": 66, "prompt": "If I am logged in list tickets; if not log me in; if tickets exist show baggage allowance; else show flights from Recife.", "category": "stress"}
+{"id": 67, "prompt": "Incomplete request to test you", "category": "stress"}
+{"id": 68, "prompt": "Could you simultaneously verify login, propose booking options, and summarize refund policy without errors?", "category": "stress"}

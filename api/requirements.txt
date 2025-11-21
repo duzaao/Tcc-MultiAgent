@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+motor
+python-jose
+argon2-cffi
+pydantic
+python-dotenv
+email-validator
+requests

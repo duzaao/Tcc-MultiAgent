@@ -1,0 +1,14 @@
+fastapi
+aiofiles
+uvicorn[standard]
+requests
+python-dotenv
+langchain
+langchain-community
+langchain-mcp-adapters
+tiktoken
+groq
+openai
+mcp
+langchain-ollama
+langchain-openai

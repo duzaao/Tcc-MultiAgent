@@ -1,0 +1,12 @@
+# Ignore environment files
+**/*.env
+tokens.env
+**/tokens.env
+
+# Ignore Terraform local plugin cache and state directories
+terraform/.terraform/
+terraform/.terraform/**
+
+# Optionally ignore other local artifacts
+.venv/
+.pytest_cache/
