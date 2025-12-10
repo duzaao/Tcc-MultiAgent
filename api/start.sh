@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-# Start the API processes (auth + flights) using the provided run_services script
+# Start Auth and Flights API services
 cd /app
 python3 scripts/run_services.py

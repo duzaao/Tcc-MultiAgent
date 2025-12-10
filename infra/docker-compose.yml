@@ -1,4 +1,5 @@
 services:
+  # MongoDB database service
   mongo:
     image: mongo:6.0
     restart: unless-stopped
@@ -7,6 +8,7 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  # FastAPI backend services (Auth & Flights)
   api:
     build:
       context: ../api
@@ -20,38 +22,7 @@ services:
       - "8002:8002"
     restart: unless-stopped
 
-
-#  agent:
-#    build:
-#      context: ../agent
-#      dockerfile: Dockerfile
-#    env_file:
-#      - ../.env
-#    volumes:
-#      - ../mcp:/mcp:ro
-#    ports:
-#      - "8000:8000"
-#    restart: unless-stopped
-#
-#volumes:
-#  mongo_data:
-
-
-ollama:
-  image: ollama/ollama:latest
-  restart: unless-stopped
-  ports:
-    - "11434:11434"
-  volumes:
-    - ollama_data:/root/.ollama
-  devices:
-    - /dev/kfd:/dev/kfd
-    - /dev/dri:/dev/dri
-  group_add:
-    - video
-  privileged: true
-  entrypoint: /bin/bash -c "ollama serve & sleep 5 && ollama pull llama3.2:3b && wait"
-
+  # Multi-agent orchestrator service
   agent:
     build:
       context: ../agent
@@ -67,10 +38,28 @@ ollama:
       - "8000:8000"
     environment:
       - OLLAMA_HOST=http://ollama:11434
-    depends_on:
-      - ollama
-    restart: "no"
+    # Uncomment to enable local LLM (requires ollama service)
+    # depends_on:
+    #   - ollama
+    # restart: "no"
+
+  # Optional: Local LLM service via Ollama
+  # Uncomment to enable and ensure GPU/compute device access
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   restart: unless-stopped
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #   devices:
+  #     - /dev/kfd:/dev/kfd
+  #     - /dev/dri:/dev/dri
+  #   group_add:
+  #     - video
+  #   privileged: true
+  #   entrypoint: /bin/bash -c "ollama serve & sleep 5 && ollama pull llama3.2:3b && wait"
 
 volumes:
   mongo_data:
-  ollama_data:
+  # ollama_data:
