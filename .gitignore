@@ -1,5 +1,4 @@
 # Ignore environment files
-**/*.env
 tokens.env
 **/tokens.env
 
